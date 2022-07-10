@@ -25,7 +25,7 @@ export const rechargeService = async (cardId: number, amount: number) => {
     }
   }
 
-  if (card.password) {
+  if (!card.password) {
     throw {
       status: 403,
       message: 'card not active'

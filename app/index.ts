@@ -8,7 +8,7 @@ import 'dotenv/config'
 import errorHandler from './middleware/errors' 
 
 /** routers */
-import cardRouter from './routers/card-router'
+import router from './routers'
 
 /** express */
 import express, { json } from 'express'
@@ -23,7 +23,7 @@ const app = express()
 /** setting server */
 app.use(json())
 app.use(cors())
-app.use(cardRouter)
+app.use(router)
 app.use(errorHandler)
 
 /** running server */

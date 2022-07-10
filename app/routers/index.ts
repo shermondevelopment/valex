@@ -13,3 +13,6 @@ const router = Router()
 
 router.use(rechargeRouter)
 router.use(cardRouter)
+
+
+export default router
