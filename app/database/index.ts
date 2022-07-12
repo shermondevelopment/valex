@@ -16,6 +16,4 @@ if (process.env.MODE === "PROD") {
 
 
 
-export const connection = new Pool({
-    ssl: process.env.MODE === "PROD" ? false : true
-});
+export const connection = new Pool(connectionConfig);
