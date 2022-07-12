@@ -6,5 +6,6 @@ interface ErrorResponse {
 }
 
 export default (error: ErrorResponse, req: Request, res: Response, next: NextFunction) => {
+  console.log(error)
   res.status(error.status).json({ error: error.message })
 }
