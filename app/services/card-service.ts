@@ -223,10 +223,11 @@ const generateNameCard = (fullName: string): string  => {
     }
   })
   name.forEach( (item, indice) => {
-    if (item !== name.at(0) && item !== name.at(-1)) {
+    if (item !== name[0] && item !== name[name.length - 1]) {
       name[indice] = name[indice].substring(0, 1)
     }
   } )
+  console.log(name.join(' '))
   return name.join(' ')
 }
 
